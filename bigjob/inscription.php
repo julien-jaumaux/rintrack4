@@ -1,3 +1,19 @@
+<?php
+include('bdd.php');
+include('user.php');
+$user = new User('');
+if(!empty($_POST)){
+$login =$_POST['login'];
+$password =$_POST['password'];
+$email =$_POST['email'];
+$firstname =$_POST['firstname'];
+$lastname =$_POST['lastname'];
+$user->register($login, $password, $email, $firstname, $lastname,$bdd);
+
+}
+//var_dump($_SESSION['user']);
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,8 +24,26 @@
     <title>Inscription</title>
 </head>
 <body>
+
+<h1>Inscription<h1>
+    <form method="post" action="">
+        <p>login</p>
+        <input type="text" name="login" placeholder="login">
+        <p>Password</p>
+        <input type="password" name="password" placeholder="password">
+        <p>Confirm password</p>
+        <input type="password" name="confirmpassword" placeholder="confirmpassword">
+        <p>email</p>
+        <input type="email" name="email" placeholder="email">
+        <p>Prenom</p>
+        <input type="text" name="firstname" placeholder="firstname">
+        <p>Nom</p>
+        <input type="text" name="lastname" placeholder="lastname">
+        <input type="submit" name="s'inscrire">
+    </form>
+    <button><a href="connexion.php">Se connecter</a></button>
     
+    <script src="./js/script.js"></script>
 </body>
 
-<script src="./js/script.js"></script>
 </html>

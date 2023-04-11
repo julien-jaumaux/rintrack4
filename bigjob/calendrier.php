@@ -1,3 +1,8 @@
+<?php
+include('bdd.php');
+include('user.php');
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,8 +13,9 @@
     <title>Calendrier</title>
 </head>
 <body>
+    <h1>Calendrier</h1>
     
+    <script src="./js/script.js"></script>
 </body>
 
-<script src="./js/script.js"></script>
 </html>

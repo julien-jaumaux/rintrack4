@@ -1,3 +1,8 @@
+<?php
+include('bdd.php');
+include('user.php');
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,7 +14,7 @@
 </head>
 <body>
     
+    <script src="./js/script.js"></script>
 </body>
 
-<script src="./js/script.js"></script>
 </html>
